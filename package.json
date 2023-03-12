@@ -19,7 +19,7 @@
   ],
   "scripts": {
     "build": "ncc build index.ts -o dist",
-    "prepublish": "pnpn build",
+    "prepublish": "pnpm build",
     "test": "jest --runInBand"
   },
   "devDependencies": {
