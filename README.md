@@ -32,7 +32,7 @@ export const muto = createMuto({
 // muto and action functions can only be imported in server components
 export const { deleteTag } = muto.actions
 
-// but types can be imported in both client or server
+// but types can be imported in both client and server
 export type AppMuto = typeof muto
 ```
 
@@ -93,15 +93,15 @@ export default async function () {
   const tags = await sql`SELECT id, title FROM tags`
 
   return (
-    <div>
+    <>
+      // pass the result of the action creator to your client component
+      <AddTagButton mutoAction={createTag({ title: 'wow' })} />
       {tags.map((tag) => (
         <div id={tag.id}>
           {tag.id}: {tag.title}
         </div>
       ))}
-      // pass the result of the action creator to your client component
-      <AddTagButton mutoAction={createTag({ title: 'wow' })} />
-    </div>
+    </>
   )
 }
 ```
