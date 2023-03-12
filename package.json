@@ -12,10 +12,6 @@
     "type": "git",
     "url": "git+https://https://github.com/UnnamedProjects/mutojs.git"
   },
-  "source": [
-    "src/index.ts",
-    "src/react/index.ts"
-  ],
   "keywords": [
     "react",
     "react server components",
@@ -24,18 +20,16 @@
     "mutojs"
   ],
   "scripts": {
-    "build": "parcel build",
+    "build": "esbuild src/index.ts src/react/index.ts --bundle --outdir=dist/",
     "prepublish": "pnpm build",
     "publish": "pnpm publish dist",
     "test": "jest --runInBand"
   },
   "devDependencies": {
-    "@parcel/core": "^2.8.3",
-    "@parcel/packager-ts": "^2.8.3",
-    "@parcel/transformer-typescript-types": "^2.8.3",
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^27.5.2",
     "@types/react": "^18.0.28",
+    "esbuild": "^0.17.11",
     "eslint": "^8.36.0",
     "eslint-config-prettier": "^8.7.0",
     "eslint-plugin-import": "^2.27.5",
@@ -43,7 +37,6 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "jest": "^27.5.1",
     "next": "^13.2.4",
-    "parcel": "^2.8.3",
     "prettier": "^2.8.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

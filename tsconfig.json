@@ -30,5 +30,6 @@
     "downlevelIteration": false,
     "noEmit": true,
     "baseUrl": "."
-  }
+  },
+  "include": ["./src/index.ts", "./src/react/index.ts"]
 }
