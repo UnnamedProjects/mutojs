@@ -1,6 +1,6 @@
 {
   "name": "@unnamed-projects/mutojs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Robert Baxter",
   "license": "MIT",
   "description": "Tool for dispatching actions from React Client Components to React Server Components",
