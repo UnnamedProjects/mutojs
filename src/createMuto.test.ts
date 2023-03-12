@@ -1,5 +1,4 @@
 import { createMuto } from './createMuto'
-import { useMuto } from './react'
 import { stringify } from './utils'
 
 describe('createMuto()', () => {

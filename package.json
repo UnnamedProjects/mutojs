@@ -8,8 +8,10 @@
     "type": "git",
     "url": "git+https://https://github.com/UnnamedProjects/mutojs.git"
   },
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/types.d.ts",
+  "source": "src/index.ts",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
   "keywords": [
     "react",
     "react server components",
@@ -18,7 +20,7 @@
     "mutojs"
   ],
   "scripts": {
-    "build": "ncc build index.ts -o dist",
+    "build": "parcel build",
     "prepublish": "pnpm build",
     "test": "jest --runInBand"
   },
@@ -26,7 +28,6 @@
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^27.5.2",
     "@types/react": "^18.0.28",
-    "@vercel/ncc": "^0.36.1",
     "eslint": "^8.36.0",
     "eslint-config-prettier": "^8.7.0",
     "eslint-plugin-import": "^2.27.5",
@@ -34,6 +35,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "jest": "^27.5.1",
     "next": "^13.2.4",
+    "parcel": "^2.8.3",
     "prettier": "^2.8.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -54,10 +56,10 @@
     }
   },
   "dependencies": {
-    "eslint-visitor-keys": "^3.3.0",
-    "prettier-linter-helpers": "^1.0.0",
-    "eslint-scope": "^7.1.1",
     "eslint-import-resolver-node": "^0.3.7",
-    "eslint-module-utils": "^2.7.4"
+    "eslint-module-utils": "^2.7.4",
+    "eslint-scope": "^7.1.1",
+    "eslint-visitor-keys": "^3.3.0",
+    "prettier-linter-helpers": "^1.0.0"
   }
 }

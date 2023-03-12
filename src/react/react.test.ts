@@ -1,6 +1,6 @@
 import { renderHook } from '@testing-library/react'
 
-import { createMuto } from './createMuto'
+import { createMuto } from '../createMuto'
 import { useMuto } from './react'
 
 // @ts-ignore TODO rbaxter - remove this later, or mock globally

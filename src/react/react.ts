@@ -2,8 +2,9 @@
 
 import { useRouter } from 'next/navigation'
 import { useCallback, useTransition } from 'react'
-import { Muto } from './createMuto'
-import { Stringified } from './utils'
+
+import type { Muto } from '../createMuto'
+import { Stringified } from '../utils'
 
 type GetStringifiedType<T extends Stringified<any>> = T extends Stringified<
   infer U
