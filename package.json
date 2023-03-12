@@ -8,6 +8,11 @@
     "dist/",
     "package.json"
   ],
+  "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./react": "./dist/react"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://https://github.com/UnnamedProjects/mutojs.git"
@@ -20,7 +25,7 @@
     "mutojs"
   ],
   "scripts": {
-    "build": "esbuild src/index.ts src/react/index.ts --bundle --outdir=dist/",
+    "build": "esbuild src/index.ts src/react/index.ts --bundle --outdir=dist/ && cp package.json dist && tsc -p tsconfig.build.json",
     "prepublish": "pnpm build",
     "publish": "pnpm publish dist",
     "test": "jest --runInBand"
