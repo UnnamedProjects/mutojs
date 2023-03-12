@@ -4,6 +4,10 @@
   "author": "Robert Baxter",
   "license": "MIT",
   "description": "Tool for dispatching actions from React Client Components to React Server Components",
+  "files": [
+    "dist/",
+    "package.json"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://https://github.com/UnnamedProjects/mutojs.git"
