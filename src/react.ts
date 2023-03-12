@@ -11,10 +11,10 @@ type GetStringifiedType<T extends Stringified<any>> = T extends Stringified<
   ? U
   : never
 
-type MutoActions<AppMuto extends Muto<any>> =
+export type MutoActions<AppMuto extends Muto<any>> =
   AppMuto['actions'][keyof AppMuto['actions']]
 
-type StringifiedMutoActions<AppMuto extends Muto<any>> = ReturnType<
+export type StringifiedMutoActions<AppMuto extends Muto<any>> = ReturnType<
   MutoActions<AppMuto>
 >
 

@@ -1,6 +1,6 @@
 import { Stringified, stringify } from './utils'
 
-export type MutoMutations = {
+type MutoMutations = {
   [K: string]: (arg?: any) => Promise<any>
 }
 
@@ -18,6 +18,12 @@ export type MutoActionCreators<Mutations extends MutoMutations> = {
         payload: Parameters<Mutations[Type]>[0]
       }>
 }
+
+export type MutoActionKeys<AppMuto extends Muto<any>> = keyof AppMuto['actions']
+export type MutoAppActions<
+  AppMuto extends Muto<any>,
+  T extends keyof AppMuto['actions']
+> = ReturnType<AppMuto['actions'][T]>
 
 export type Muto<Mutations extends MutoMutations> = {
   name: string
