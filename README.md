@@ -12,9 +12,7 @@ React Server Components are still _very_ experimental. I'm not even sure if this
 pnpm i @up/mutojs
 ```
 
-#### Basic Example
-
-###### Create a mutation collection
+##### Create a mutation collection
 
 ```ts
 // src/app/muto.ts
@@ -39,7 +37,7 @@ export const muto = createMuto({
 export const { deleteTag } = muto.actions
 ```
 
-###### Use action creators to generate serialized payloads
+##### Use action creators to generate serialized payloads
 
 ```tsx
 // src/app/page.tsx
@@ -60,7 +58,7 @@ export default async function () {
 }
 ```
 
-###### Dispatch the action payload from a Client component
+##### Dispatch the action payload from a Client component
 
 ```tsx
 // src/app/DeleteTagButton.tsx
@@ -75,7 +73,7 @@ export function DeleteTagButton({ mutoDeleteTagAction }) {
 }
 ```
 
-###### Create a Next RouteHandler to respond to dispatched actions
+##### Create a Next RouteHandler to respond to dispatched actions
 
 ```ts
 // src/app/api/mutations/route.ts
@@ -87,7 +85,7 @@ export async function POST(request: Request) {
 }
 ```
 
-###### And that's it! But how does it work?
+##### And that's it! but how does it work?
 
 The `deleteTag` action function creates a serialized payload that can be passed from a Server Component to a Client Component.
 This payload contains:
@@ -109,7 +107,7 @@ The `mutoRouteHandler` takes the payload and uses it to call the appropriate mut
 
 #### Typescript Support
 
-###### Create an AppMuto type
+##### Create an AppMuto type
 
 ```ts
 import { createMuto } from '@up/mutojs'
@@ -135,7 +133,7 @@ export const { createTag } = muto.actions
 export type AppMuto = typeof muto
 ```
 
-###### Use AppMuto to define typesafe helpers
+##### Use AppMuto to define typesafe helpers
 
 ```ts
 // src/app/useAppMuto.ts
@@ -160,17 +158,17 @@ export type AppMutoActions<T extends MutoActionKeys<AppMuto>> = MutoAppActions<
 >
 ```
 
-###### Use helpers in your Client Components to add type safety
+##### Use helpers in your Client Components to add type safety
 
 ```tsx
-// src/app/DeleteTagButton.tsx
+// src/app/AddTagButton.tsx
 
 'use client'
 
 import { AppMutoActions, useAppMuto } from '@/app/appMuto/useAppMuto'
 
 interface AddTagButtonProps {
-  // DeleteTagButton only accepts `deleteTag` action payloads!
+  // AddTagButton only accepts `createTag` action payloads!
   mutoAction: AppMutoActions<'createTag'>
 }
 
