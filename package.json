@@ -1,16 +1,27 @@
 {
   "name": "@up/mutojs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.1",
+  "author": "Robert Baxter",
+  "license": "MIT",
+  "description": "Tool for dispatching actions from React Client Components to React Server Components",
+  "repository": {
+    "type": "git",
+    "url": "git+https://https://github.com/UnnamedProjects/mutojs.git"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "react",
+    "react server components",
+    "next",
+    "muto",
+    "mutojs"
+  ],
   "scripts": {
     "build": "ncc build index.ts -o dist",
     "prepublish": "pnpn build",
     "test": "jest --runInBand"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^27.5.2",
