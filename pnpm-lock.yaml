@@ -4,6 +4,7 @@ specifiers:
   '@testing-library/react': ^14.0.0
   '@types/jest': ^27.5.2
   '@types/react': ^18.0.28
+  '@vercel/ncc': ^0.36.1
   eslint: ^8.36.0
   eslint-config-prettier: ^8.7.0
   eslint-plugin-import: ^2.27.5
@@ -22,6 +23,7 @@ devDependencies:
   '@testing-library/react': 14.0.0_biqbaboplfbrettd7655fr4n2y
   '@types/jest': 27.5.2
   '@types/react': 18.0.28
+  '@vercel/ncc': 0.36.1
   eslint: 8.36.0
   eslint-config-prettier: 8.7.0_eslint@8.36.0
   eslint-plugin-import: 2.27.5_eslint@8.36.0
@@ -1136,6 +1138,11 @@ packages:
     resolution: {integrity: sha512-AxO/ADJOBFJScHbWhq2xAhlWP24rY4aCEG/NFaMvbT3X2MgRsLjhjQwsn0Zi5zn0LG9jUhCCZMeX9Dkuw6k+vQ==}
     dependencies:
       '@types/yargs-parser': 21.0.0
+    dev: true
+
+  /@vercel/ncc/0.36.1:
+    resolution: {integrity: sha512-S4cL7Taa9yb5qbv+6wLgiKVZ03Qfkc4jGRuiUQMQ8HGBD5pcNRnHeYM33zBvJE4/zJGjJJ8GScB+WmTsn9mORw==}
+    hasBin: true
     dev: true
 
   /abab/2.0.6:
