@@ -22,6 +22,7 @@
   "scripts": {
     "build": "parcel build",
     "prepublish": "pnpm build",
+    "publish": "pnpm publish dist",
     "test": "jest --runInBand"
   },
   "devDependencies": {
