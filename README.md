@@ -2,6 +2,10 @@
 
 `muto.js` is a tool for creating type safe serialized actions to facility communication between React Server Components and React Client Components
 
+## use at your own risk!
+
+React Server Components are still _very_ experimental. I'm not even sure if this is lib is a good idea, but it was fun to make. :)
+
 ### Quick Start
 
 ```
