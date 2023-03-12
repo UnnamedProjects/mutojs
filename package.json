@@ -25,7 +25,7 @@
     "mutojs"
   ],
   "scripts": {
-    "build": "esbuild src/index.ts src/react/index.ts --bundle --outdir=dist/ && cp package.json dist && tsc -p tsconfig.build.json",
+    "build": "rimraf dist/ && esbuild src/index.ts src/react/index.ts --bundle --outdir=dist/ && cp package.json dist && tsc -p tsconfig.build.json",
     "prepublish": "pnpm build",
     "publish": "pnpm publish dist",
     "test": "jest --runInBand"
@@ -46,6 +46,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "release-it": "^15.8.0",
+    "rimraf": "^4.4.0",
     "ts-jest": "^27.1.5",
     "typescript": "^4.9.5"
   },
@@ -60,12 +61,5 @@
     "next": {
       "optional": true
     }
-  },
-  "dependencies": {
-    "eslint-import-resolver-node": "^0.3.7",
-    "eslint-module-utils": "^2.7.4",
-    "eslint-scope": "^7.1.1",
-    "eslint-visitor-keys": "^3.3.0",
-    "prettier-linter-helpers": "^1.0.0"
   }
 }
