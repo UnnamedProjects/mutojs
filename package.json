@@ -1,5 +1,5 @@
 {
-  "name": "@up/mutojs",
+  "name": "@unnamed-projects/mutojs",
   "version": "0.0.1",
   "author": "Robert Baxter",
   "license": "MIT",
@@ -52,5 +52,12 @@
     "next": {
       "optional": true
     }
+  },
+  "dependencies": {
+    "eslint-visitor-keys": "^3.3.0",
+    "prettier-linter-helpers": "^1.0.0",
+    "eslint-scope": "^7.1.1",
+    "eslint-import-resolver-node": "^0.3.7",
+    "eslint-module-utils": "^2.7.4"
   }
 }
