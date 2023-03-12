@@ -2,7 +2,6 @@ import { renderHook } from '@testing-library/react'
 
 import { createMuto } from './createMuto'
 import { useMuto } from './react'
-import { useTransition } from 'react'
 
 // @ts-ignore TODO rbaxter - remove this later, or mock globally
 global.fetch = jest.fn(() =>
@@ -34,7 +33,7 @@ describe('useMuto()', () => {
     })
 
     const { result } = renderHook(() =>
-      useMuto<typeof muto>(muto.actions.myMutation(1337))
+      useMuto<typeof muto>('localhost', muto.actions.myMutation(1337))
     )
     expect(result.current).toBeDefined()
   })
@@ -50,7 +49,7 @@ describe('useMuto()', () => {
     })
 
     const { result } = renderHook(() =>
-      useMuto<typeof muto>(muto.actions.myMutation(1337))
+      useMuto<typeof muto>('localhost', muto.actions.myMutation(1337))
     )
     const resp = await result.current()
     expect(resp).toEqual('Nice!')

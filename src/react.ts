@@ -27,12 +27,13 @@ type MutoatorReturnValue<AppMuto extends Muto<any>> = ReturnType<
 >
 
 export function useMuto<AppMuto extends Muto<any>>(
+  url: string,
   action: StringifiedMutoActions<AppMuto>
 ): () => MutoatorReturnValue<AppMuto> {
   const router = useRouter()
   const [, startTransition] = useTransition()
   return useCallback(async () => {
-    const resp = await fetch('http://localhost:3000/api/mutations', {
+    const resp = await fetch(url, {
       method: 'POST',
       body: action,
     })
